@@ -6,8 +6,8 @@ import com.skillw.asahi.api.prefixParser
 import com.skillw.asahi.api.quest
 import com.skillw.asahi.api.quester
 import org.bukkit.Location
-import taboolib.common.platform.ProxyParticle
-import taboolib.common.platform.sendTo
+import taboolib.library.xseries.ProxyParticle
+import com.skillw.particlelib.utils.sendTo
 import taboolib.common.util.Vector
 import taboolib.common5.cdouble
 import taboolib.common5.cint
@@ -37,7 +37,7 @@ private fun particle() = prefixParser<Unit> {
     //速度
     val speed = map.quester { it.getOrDefault("speed", 1.0).cdouble }
     //粒子数据
-    val data: Quester<ProxyParticle.Data?> = map.quester { it["data"] as? ProxyParticle.Data? }
+    val data: Quester<Any?> = map.quester { it["data"] as? Any? }
     result {
         particle.get()
             .sendTo(

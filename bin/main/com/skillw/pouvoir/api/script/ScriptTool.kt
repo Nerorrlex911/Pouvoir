@@ -25,10 +25,10 @@ import org.bukkit.plugin.Plugin
 import org.bukkit.potion.PotionEffectType
 import taboolib.common.platform.Platform
 import taboolib.common.platform.ProxyCommandSender
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import taboolib.common.platform.event.EventPriority
 import taboolib.common.platform.function.*
-import taboolib.common.platform.sendTo
+import com.skillw.particlelib.utils.sendTo
 import taboolib.common.platform.service.PlatformExecutor
 import taboolib.common.util.Vector
 import taboolib.common5.Mirror

@@ -1,8 +1,8 @@
 package com.skillw.particlelib.pobject
 
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import taboolib.common.platform.function.submit
-import taboolib.common.platform.sendTo
+import com.skillw.particlelib.utils.sendTo
 import taboolib.common.util.Location
 import taboolib.common.util.Vector
 import java.awt.Color

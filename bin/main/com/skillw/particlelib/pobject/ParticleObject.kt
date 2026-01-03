@@ -5,10 +5,10 @@ import com.skillw.pouvoir.api.feature.selector.Target
 import com.skillw.pouvoir.api.feature.selector.toTarget
 import com.skillw.pouvoir.util.getEntities
 import org.bukkit.entity.Entity
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import taboolib.common.platform.function.submit
 import taboolib.common.platform.function.submitAsync
-import taboolib.common.platform.sendTo
+import com.skillw.particlelib.utils.sendTo
 import taboolib.common.platform.service.PlatformExecutor
 import taboolib.common.util.Location
 import taboolib.common.util.Vector

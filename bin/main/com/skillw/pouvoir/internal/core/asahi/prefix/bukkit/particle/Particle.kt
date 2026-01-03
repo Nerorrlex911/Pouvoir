@@ -6,8 +6,8 @@ import com.skillw.asahi.api.prefixParser
 import com.skillw.asahi.api.quest
 import com.skillw.asahi.api.quester
 import org.bukkit.Location
-import taboolib.common.platform.ProxyParticle
-import taboolib.common.platform.sendTo
+import taboolib.library.xseries.ProxyParticle
+import com.skillw.particlelib.utils.sendTo
 import taboolib.common.util.Vector
 import taboolib.common5.cdouble
 import taboolib.common5.cint

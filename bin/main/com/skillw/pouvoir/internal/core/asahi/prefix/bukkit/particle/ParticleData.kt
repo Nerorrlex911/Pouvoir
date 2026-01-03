@@ -7,7 +7,7 @@ import com.skillw.asahi.api.prefixParser
 import com.skillw.asahi.api.quest
 import com.skillw.asahi.api.quester
 import org.bukkit.entity.Entity
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import taboolib.common.util.Location
 import taboolib.common5.cint
 import taboolib.platform.util.toProxyLocation

@@ -5,13 +5,16 @@ import com.skillw.pouvoir.api.feature.selector.Target
 import com.skillw.pouvoir.api.feature.selector.toTarget
 import com.skillw.pouvoir.util.getEntities
 import org.bukkit.entity.Entity
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import taboolib.common.platform.function.submit
 import taboolib.common.platform.function.submitAsync
-import taboolib.common.platform.sendTo
+import com.skillw.particlelib.utils.sendTo
+import net.minecraft.core.particles.Particle
+import net.minecraft.core.particles.Particles
 import taboolib.common.platform.service.PlatformExecutor
 import taboolib.common.util.Location
 import taboolib.common.util.Vector
+import taboolib.library.xseries.XParticle
 import taboolib.platform.util.toProxyLocation
 import java.awt.Color
 
@@ -43,7 +46,7 @@ abstract class ParticleObject() {
     var count = 1
     var offset = Vector(0, 0, 0)
     var extra = 0.0
-    private var data: ProxyParticle.Data? = null
+    private var data: Any? = null
     var entity: Entity? = null
     private var task: PlatformExecutor.PlatformTask? = null
 
@@ -174,13 +177,13 @@ abstract class ParticleObject() {
     }
 
     fun getColor(): Color? {
-        return if (data is ProxyParticle.DustData) {
-            (data as ProxyParticle.DustData?)?.color
+        return if (data is org.bukkit.Particle.DustOptions) {
+            (data as org.bukkit.Particle.DustOptions?)?.color?.asRGB()?.let { Color(it) }
         } else null
     }
 
     fun setColor(color: Color) {
-        data = ProxyParticle.DustData(color, 1f)
+        data = org.bukkit.Particle.DustOptions(org.bukkit.Color.fromRGB(color.rgb), 1f)
     }
 
     fun attachEntity(entity: Entity): ParticleObject {
@@ -204,7 +207,7 @@ abstract class ParticleObject() {
         count: Int = this.count,
         offset: Vector = this.offset,
         extra: Double = this.extra,
-        data: ProxyParticle.Data? = this.data,
+        data: Any? = this.data,
     ) {
         var showLocation = location
         if (hasMatrix()) {

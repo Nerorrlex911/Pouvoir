@@ -1,7 +1,7 @@
 package com.skillw.particlelib.pobject
 
 import org.bukkit.entity.Entity
-import taboolib.common.platform.ProxyParticle
+import taboolib.library.xseries.ProxyParticle
 import com.skillw.particlelib.utils.matrix.Matrixs
 
 /**

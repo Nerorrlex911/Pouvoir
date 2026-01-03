@@ -1,5 +1,6 @@
 package com.skillw.pouvoir.api.script
 
+import com.skillw.particlelib.utils.sendTo
 import com.skillw.pouvoir.Pouvoir
 import com.skillw.pouvoir.Pouvoir.listenerManager
 import com.skillw.pouvoir.Pouvoir.scriptManager
@@ -38,6 +39,7 @@ import taboolib.common.platform.service.PlatformOpenContainer
 import taboolib.common.util.Vector
 import taboolib.common.util.unsafeLazy
 import taboolib.library.reflex.Reflex.Companion.getProperty
+import taboolib.library.xseries.ProxyParticle
 import taboolib.module.chat.TellrawJson
 import taboolib.module.nms.getI18nName
 import taboolib.module.nms.getItemTag
@@ -444,7 +446,7 @@ object ScriptTool : BaseMap<String, Any>() {
         offset: Vector = Vector(0, 0, 0),
         count: Int = 1,
         speed: Double = 0.0,
-        data: ProxyParticle.Data? = null,
+        data: Any? = null,
     ) {
         particle.sendTo(adaptLocation(location), range, offset, count, speed, data)
     }

@@ -1,10 +1,11 @@
 package com.skillw.particlelib.pobject
 
-import taboolib.common.platform.ProxyParticle
+import com.skillw.particlelib.utils.sendTo
+import org.bukkit.Particle
 import taboolib.common.platform.function.submit
-import taboolib.common.platform.sendTo
 import taboolib.common.util.Location
 import taboolib.common.util.Vector
+import taboolib.library.xseries.ProxyParticle
 import java.awt.Color
 
 /**
@@ -128,7 +129,7 @@ class Line constructor(
             while (i < vectorLength) {
                 ProxyParticle.HAPPY_VILLAGER.sendTo(
                     locA.clone().add(vectorAB.clone().multiply(i)),
-                    data = ProxyParticle.DustData(color, 1f)
+                    data = Particle.DustOptions(org.bukkit.Color.fromRGB(color.rgb), 1f)
                 )
                 i += step
             }

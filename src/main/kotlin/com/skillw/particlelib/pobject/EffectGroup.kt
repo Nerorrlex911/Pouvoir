@@ -1,8 +1,8 @@
 package com.skillw.particlelib.pobject
 
-import org.bukkit.entity.Entity
-import taboolib.common.platform.ProxyParticle
 import com.skillw.particlelib.utils.matrix.Matrixs
+import org.bukkit.entity.Entity
+import taboolib.library.xseries.ProxyParticle
 
 /**
  * 代表一个特效组
