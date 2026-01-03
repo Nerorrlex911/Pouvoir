@@ -107,7 +107,6 @@ com.skillw.pouvoir.internal.core.script.javascript.impl
 com.skillw.pouvoir.internal.feature.compat.placeholder
 com.skillw.pouvoir.internal.feature.database
 com.skillw.pouvoir.internal.feature.database.mongodb
-com.skillw.pouvoir.internal.feature.database.redis
 com.skillw.pouvoir.internal.feature.database.sql
 com.skillw.pouvoir.internal.feature.database.sql.sql
 com.skillw.pouvoir.internal.feature.database.sql.sqlite
